@@ -14,8 +14,8 @@ This is the beginning of my Airbnb project, it brings a console where you can us
 |quit 			 |`Exit to program`  
 |EOF             |`Exit to program` 
 |help          |`Show commands and description (help (command))`
-|dsnmi			|`dsaasd`
-|dsadas			|`dasda`
+|create			|`Create one id for object`
+|			|``
 
 ## Authors
 
