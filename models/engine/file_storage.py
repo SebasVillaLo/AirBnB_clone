@@ -39,5 +39,5 @@ class FileStorage():
                 for key, value in dictnew.items():
                     self.__objects[key] = self.classes[
                         value["__class__"]](**value)
-        except:
+        except FileNotFoundError:
             pass
