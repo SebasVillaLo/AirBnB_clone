@@ -15,7 +15,7 @@ This is the beginning of my Airbnb project, it brings a console where you can us
 |EOF             |`Exit to program` 
 |help          |`Show commands and description (help (command))`
 |create			|`Create one id for object`
-|			|``
+|show		|`show id object`
 
 ## Authors
 
