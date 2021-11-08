@@ -20,3 +20,4 @@ This is the beginning of my Airbnb project, it brings a console where you can us
 ## Authors
 
  - Sebastian Villa - [villalopezsebastian@gmail.com](https://mail.google.com/mail/u/0/#inbox) - [GitHub](https://github.com/SebasVillaLo)
+ - Juan David Balanta - [jdbalantar@gmail.com](https://mail.google.com/mail/u/0/#inbox) - [GitHub](https://github.com/jdbalantar)
