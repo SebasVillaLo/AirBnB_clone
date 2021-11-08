@@ -44,11 +44,11 @@ class HBNBCommand(cmd.Cmd):
         print(insta.id)
         models.storage.save()
 
-    def do_show(self, arg):
+    def do_show(self, args):
         """
         Prints the string representation of an instance\n
         """
-        token = shlex.split(arg)
+        token = shlex.split(args)
         if len(token) == 0:
             print("** class name missing **")
 
