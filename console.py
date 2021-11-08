@@ -44,28 +44,28 @@ class HBNBCommand(cmd.Cmd):
         print(insta.id)
         models.storage.save()
 
-    def do_show(sel, args):
-        """Show the id of any object"""
-        args = args.split(' ')
-
-        if args[0] == 0:
+    def do_show(self, arg):
+        """
+        Prints the string representation of an instance\n
+        """
+        token = shlex.split(arg)
+        if len(token) == 0:
             print("** class name missing **")
-            return
-        if args[0] in HBNBCommand.classes:
-            if len(args) > 1:
-                aux = models.storage.all()
-                key = args[0] + '.' + args[1]
-                if key in aux:
-                    print(key[aux])
-                    return
-                else:
-                    print("** no instance found **")
-                    return
-            else:
-                print("** instance id missing **")
-                return
-        else:
+
+        elif token[0] not in self.dicc:
             print("** class doesn't exist **")
+
+        elif len(token) == 1:
+            print("** instance id missing **")
+
+        else:
+            ins = models.storage.all()
+            key = token[0] + "." + token[1]
+            if key in ins:
+                print(ins[key])
+            else:
+                print("** no instance found **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
