@@ -52,7 +52,7 @@ class HBNBCommand(cmd.Cmd):
         if len(token) == 0:
             print("** class name missing **")
 
-        elif token[0] not in self.dicc:
+        elif token[0] not in self.classes:
             print("** class doesn't exist **")
 
         elif len(token) == 1:
