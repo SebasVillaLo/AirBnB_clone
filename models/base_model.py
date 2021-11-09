@@ -10,7 +10,7 @@ timeformat = "%Y-%m-%dT%H:%M:%S.%f"
 
 
 class BaseModel:
-    """code"""
+    """Base model class """
 
     def __init__(self, *args, **kwargs):
         """init"""
@@ -30,17 +30,17 @@ class BaseModel:
             models.storage.new(self)
 
     def __str__(self):
-        """str"""
+        """return str for format of dictionary"""
         return "[{}] ({}) <{}>".format(
             self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
-        """Save"""
+        """Save file json with time"""
         self.updated_at = datetime.datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        """dict"""
+        """Create dictionary for class and id"""
         dictionarynew = {}
         dictionarynew = self.__dict__.copy()
         dictionarynew['__class__'] = self.__class__.__name__
